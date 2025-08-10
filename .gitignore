@@ -1,0 +1,10 @@
+﻿Assets/awakeexample.cs
+Library
+.vs
+*.vsconfig
+*.csproj
+*.sln
+Logs
+obj
+Temp
+UserSettings
