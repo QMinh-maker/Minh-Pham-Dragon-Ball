@@ -242,18 +242,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.026496887, y: -0.02136612}
+  m_Offset: {x: -0.020149231, y: 0.768322}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 21, y: 46}
+    oldSize: {x: 24, y: 45}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 21.052994, y: 46.042732}
+  m_Size: {x: 23.571846, y: 44.463356}
   m_EdgeRadius: 0
 --- !u!212 &504009807
 SpriteRenderer:
@@ -296,7 +296,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 1595536565, guid: 09f1c3db61f6a084a8159ee09b9c039b, type: 3}
+  m_Sprite: {fileID: -2105515119, guid: 09f1c3db61f6a084a8159ee09b9c039b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -315,7 +315,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 504009804}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -50.3, y: -84.5, z: 0}
+  m_LocalPosition: {x: -50.3, y: -86.55, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -338,18 +338,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -4.113447, y: -4.150902}
+  m_Offset: {x: -3.460411, y: -4.150902}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 21, y: 46}
+    oldSize: {x: 24, y: 45}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 29.226894, y: 21.08316}
+  m_Size: {x: 30.532967, y: 21.08316}
   m_EdgeRadius: 0
 --- !u!114 &504009810
 MonoBehaviour:
@@ -589,7 +589,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!95 &586061037
 Animator:
   serializedVersion: 5
@@ -1442,7 +1442,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4235306589802542364, guid: 171be8e8783d46f4d964b9c520a802c8, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 277.7
+      value: 310
       objectReference: {fileID: 0}
     - target: {fileID: 4235306590041278862, guid: 171be8e8783d46f4d964b9c520a802c8, type: 3}
       propertyPath: m_Value
