@@ -467,14 +467,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6302d5b6ebde7924c8d4a1fdd0717850, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 504009812}
+  anim: {fileID: 504009812}
   attackPoint: {fileID: 1296097329}
   attackRange: 18
   enemyLayers:
     serializedVersion: 2
     m_Bits: 64
   attackDamage: 40
-  attackRate: 3
 --- !u!114 &504009815
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1442,7 +1441,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4235306589802542364, guid: 171be8e8783d46f4d964b9c520a802c8, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 310
+      value: 268
       objectReference: {fileID: 0}
     - target: {fileID: 4235306590041278862, guid: 171be8e8783d46f4d964b9c520a802c8, type: 3}
       propertyPath: m_Value

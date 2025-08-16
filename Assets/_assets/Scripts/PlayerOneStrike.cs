@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class PlayerOneStrike : MonoBehaviour
 {
-    public Animator animator;
+    public Animator anim;
     public Transform attackPoint;
     public float attackRange = 0.5f;
     public LayerMask enemyLayers;
     public int attackDamage = 40;
-    public float attackRate = 2f;
+    //public float attackRate = 2f;
     float nextAttackTime = 0f;
 
 
@@ -19,7 +19,7 @@ public class PlayerOneStrike : MonoBehaviour
 
      void Start()
     {
-        animator = GetComponent<Animator>();
+        anim = GetComponent<Animator>();
     }
 
    
@@ -32,8 +32,36 @@ public class PlayerOneStrike : MonoBehaviour
             if (Input.GetMouseButtonDown(0))
             {
                 Strike();
-                nextAttackTime = Time.time + 1f / attackRate;
+                Debug.Log(noOfClicks);
+                //nextAttackTime = Time.time + 1f / attackRate;
             }
+        }
+
+        if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 0.7f 
+            && anim.GetCurrentAnimatorStateInfo(0).IsName("Strike1")) 
+        {
+            anim.SetBool("Strike1", false); 
+        }
+        if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 0.7f 
+            && anim.GetCurrentAnimatorStateInfo(0).IsName("Strike2")) 
+        {
+            anim.SetBool("Strike2", false); 
+        }
+        if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 0.7f 
+            && anim.GetCurrentAnimatorStateInfo(0).IsName("Strike3")) 
+        { 
+            anim.SetBool("Strike3", false); 
+            
+        }
+        if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 0.7f
+            && anim.GetCurrentAnimatorStateInfo(0).IsName("Strike4"))
+        {
+            anim.SetBool("Strike4", false);
+            noOfClicks = 0;
+        }
+        if (Time.time - lastClickedTime > maxcomboDelay) 
+        { 
+            noOfClicks = 0; 
         }
     }
 
@@ -43,29 +71,29 @@ public class PlayerOneStrike : MonoBehaviour
         noOfClicks++;
         if (noOfClicks == 1)
         {
-            animator.SetBool("Strike1", true);
+            anim.SetBool("Strike1", true);
         }
         noOfClicks = Mathf.Clamp(noOfClicks,0,3);
 
-        if(noOfClicks >=2 && animator.GetCurrentAnimatorStateInfo(0).normalizedTime > 0.7f
-            && animator.GetCurrentAnimatorStateInfo(0).IsName("Strike"))
+        if(noOfClicks >=2 && anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 0.7f
+            && anim.GetCurrentAnimatorStateInfo(0).IsName("Strike"))
         {
-            animator.SetBool("Strike1", false);
-            animator.SetBool("Strike2", true);
+            anim.SetBool("Strike1", false);
+            anim.SetBool("Strike2", true);
         }
 
-        if (noOfClicks >= 3 && animator.GetCurrentAnimatorStateInfo(0).normalizedTime > 0.7f
-            && animator.GetCurrentAnimatorStateInfo(0).IsName("Strike2"))
+        if (noOfClicks >= 3 && anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 0.7f
+            && anim.GetCurrentAnimatorStateInfo(0).IsName("Strike2"))
         {
-            animator.SetBool("Strike2", false);
-            animator.SetBool("Strike3", true);
+            anim.SetBool("Strike2", false);
+            anim.SetBool("Strike3", true);
         }
 
-        if (noOfClicks >= 4 && animator.GetCurrentAnimatorStateInfo(0).normalizedTime > 0.7f
-            && animator.GetCurrentAnimatorStateInfo(0).IsName("Strike3"))
+        if (noOfClicks >= 4 && anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 0.7f
+            && anim.GetCurrentAnimatorStateInfo(0).IsName("Strike3"))
         {
-            animator.SetBool("Strike3", false);
-            animator.SetBool("Strike4", true);
+            anim.SetBool("Strike3", false);
+            anim.SetBool("Strike4", true);
         }
 
 
