@@ -26,30 +26,24 @@ public class PlayerOneStrike : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
-       
-
-        if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 0.7f 
-            && anim.GetCurrentAnimatorStateInfo(0).IsName("Strike1")) 
+    {      
+        if (anim.GetCurrentAnimatorStateInfo(0).IsName("Strike1")) 
         {
             anim.SetBool("Strike1", false);
             Debug.Log("strike 1 dang chay");
         }
-        if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 0.7f 
-            && anim.GetCurrentAnimatorStateInfo(0).IsName("Strike2")) 
+        if (anim.GetCurrentAnimatorStateInfo(0).IsName("Strike2")) 
         {
             anim.SetBool("Strike2", false);
             Debug.Log("strike 2 dang chay");
         }
-        if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 0.7f 
-            && anim.GetCurrentAnimatorStateInfo(0).IsName("Strike3")) 
+        if ( anim.GetCurrentAnimatorStateInfo(0).IsName("Strike3")) 
         { 
             anim.SetBool("Strike3", false);
             Debug.Log("strike 3 dang chay");
 
         }
-        if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 0.7f
-            && anim.GetCurrentAnimatorStateInfo(0).IsName("Strike4"))
+        if (anim.GetCurrentAnimatorStateInfo(0).IsName("Strike4"))
         {
             anim.SetBool("Strike4", false);
             Debug.Log("strike 4 dang chay");
@@ -81,32 +75,26 @@ public class PlayerOneStrike : MonoBehaviour
         }
         noOfClicks = Mathf.Clamp(noOfClicks,0,3);
 
-        if(noOfClicks ==2 && anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 0.7f
-            && anim.GetCurrentAnimatorStateInfo(0).IsName("Strike"))
+        if(noOfClicks ==2 && anim.GetCurrentAnimatorStateInfo(0).IsName("Strike"))
         {
             anim.SetBool("Strike1", false);
             anim.SetBool("Strike2", true);
             
         }
 
-        if (noOfClicks == 3 && anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 0.7f
-            && anim.GetCurrentAnimatorStateInfo(0).IsName("Strike2"))
+        if (noOfClicks == 3 && anim.GetCurrentAnimatorStateInfo(0).IsName("Strike2"))
         {
             anim.SetBool("Strike2", false);
             anim.SetBool("Strike3", true);
             
         }
 
-        if (noOfClicks == 4 && anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 0.7f
-            && anim.GetCurrentAnimatorStateInfo(0).IsName("Strike3"))
+        if (noOfClicks == 4 && anim.GetCurrentAnimatorStateInfo(0).IsName("Strike3"))
         {
             anim.SetBool("Strike3", false);
             anim.SetBool("Strike4", true);
             
         }
-
-
-
 
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position,
             attackRange, enemyLayers);
