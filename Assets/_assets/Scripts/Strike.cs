@@ -56,7 +56,7 @@ public class PlayerOneStrike : MonoBehaviour
 
         if (Time.time >= nextAttackTime)
         {
-            if (Input.GetMouseButtonDown(0))
+            if (Input.GetMouseButton(0))
             {
                 Strike();                
                 nextAttackTime = Time.time + 1f / attackRate;

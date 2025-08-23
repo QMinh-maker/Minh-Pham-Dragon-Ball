@@ -5,7 +5,7 @@ public class CharacterController2D : MonoBehaviour
 {
     [SerializeField] private float flySpeed = 10f;        // tốc độ bay
     [SerializeField] private float movementSmoothing = .05f;
-    [SerializeField] private Transform enemy;             // tham chiếu tới kẻ địch
+    public Transform enemy;             // tham chiếu tới kẻ địch
 
     private Rigidbody2D rb;
     private Vector3 velocity = Vector3.zero;
